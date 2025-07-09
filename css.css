@@ -1245,3 +1245,151 @@
         .nutrition-btn:hover {
             transform: scale(1.1);
         }
+
+
+
+/* Styles for Monthly Goals Overlay */
+.monthly-goals-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.monthly-goals-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.monthly-goals-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 90%;
+    max-width: 700px;
+    max-height: 80vh;
+    background: rgb(255, 255, 255);
+    border-radius: 1rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.monthly-goals-overlay.active .monthly-goals-panel {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.monthly-goals-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.monthly-goals-header h3 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.monthly-goals-content {
+    padding: 1.5rem;
+    max-height: calc(80vh - 100px); /* Adjust based on header height */
+    overflow-y: auto;
+}
+
+.goals-list {
+    list-style: none;
+    padding: 0;
+}
+
+.goal-item {
+    background: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.goal-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.goal-item.completed {
+    background: #e6ffed; /* Light green for completed */
+    border-color: var(--success-color);
+    opacity: 0.8;
+    text-decoration: line-through;
+}
+
+.goal-checkbox {
+    width: 24px;
+    height: 24px;
+    min-width: 24px; /* Ensure it doesn't shrink */
+    min-height: 24px; /* Ensure it doesn't shrink */
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.goal-checkbox.checked {
+    background: var(--success-color);
+    border-color: var(--success-color);
+}
+
+.goal-checkbox.checked::after {
+    content: '✔';
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.goal-text {
+    flex: 1;
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.4;
+}
+
+/* Responsive adjustments for goals overlay */
+@media (max-width: 768px) {
+    .monthly-goals-panel {
+        width: 95%;
+        max-height: 85vh;
+    }
+
+    .monthly-goals-header {
+        padding: 1rem;
+    }
+
+    .monthly-goals-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .monthly-goals-content {
+        padding: 1rem;
+    }
+}

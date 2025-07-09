@@ -1099,3 +1099,153 @@
                 `;
             }).join('');
         }
+
+
+
+
+        // Functionality for Monthly Goals Panel
+const monthlyGoalsBtn = document.getElementById('monthly-goals-btn');
+const monthlyGoalsOverlay = document.getElementById('monthly-goals-overlay');
+const closeMonthlyGoalsBtn = document.getElementById('close-monthly-goals-btn');
+const goalsListContainer = document.getElementById('goals-list');
+const goalsEmptyState = document.getElementById('goals-empty-state');
+
+// Load goals from Metas Julio.txt content
+const monthlyGoalsData = `
+Avanzar Segundo EP Musical 1 hora diaria             Minimo tener borradores instrumentales de todas las canciones este mes
+Avanzar Marie´s Delirium 1 vez por semana            Minimo que funcione bien la Lobby y la primera estructura del juego
+Avanzar el curso de SQL 2 horas diarias   (Terminar este mes)
+Avanzar el curso de Programacion desde 0  (Terminar este mes)
+Hacer Covers en Tiktok 1 por semana                 Minimo 3/4 Covers bien hechos este mes
+Subir un Cover a Youtube 1 por semana               Minimo 2 Covers Completos que esten bien en YT
+
+Estudiar C 4 horas a la semana                      Minimo Pasar el Examen este mes
+Avanzar CUCEI MART 7 horas a la semana                       Terminar el Area de Mapa interactivo y agregar mas emprendedores
+Avanzar NEXCODE 7 horas a la semana                 Minimo curso de SQL y programacion desde 0 Terminados
+Hacer Pagina Web                                    almenos 10 Emprendedores CUCEI
+
+
+Curso de Guitarra 3 horas a la semana               Ya saber hacer solos a fin de mes
+Curso de Voz 3 horas a la semana                    Mejorar mas la tecnica vocal
+Curso de Composiciones 2 horas a la semana          Acabarlo y hacer 3 letras para fin de mes
+
+Estudiar Repertorios Alonso, FS y Farid             Poder tener 2 horas de repertorio para restaurantes y que nos contraten por mas dinero, Poder ir a un estudio a sacar 2 Covers,     Tocar en vivo almenos 2 Canciones
+Hacer ejercicio 1 hora diaria                       Subir minimo 2 kilos
+Meditar 1 hora diaria
+`;
+
+let monthlyGoals = [];
+
+function parseMonthlyGoals(text) {
+    const lines = text.split('\n').filter(line => line.trim() !== '');
+    return lines.map((line, index) => {
+        // Attempt to separate main goal from sub-goal/minimum, if present
+        const parts = line.split('Minimo');
+        const title = parts[0].trim();
+        const subgoal = parts.length > 1 ? `Minimo${parts[1].trim()}` : '';
+
+        return {
+            id: `monthly-goal-${index}`,
+            title: title,
+            subgoal: subgoal, // Store subgoal separately
+            completed: false
+        };
+    });
+}
+
+// Load completed goals from localStorage
+function loadCompletedMonthlyGoals() {
+    const saved = localStorage.getItem('completedMonthlyGoals');
+    return saved ? JSON.parse(saved) : {};
+}
+
+// Save completed goals to localStorage
+function saveCompletedMonthlyGoals(completedGoals) {
+    localStorage.setItem('completedMonthlyGoals', JSON.stringify(completedGoals));
+}
+
+let completedMonthlyGoals = loadCompletedMonthlyGoals();
+
+// Function to render monthly goals
+function renderMonthlyGoals() {
+    goalsListContainer.innerHTML = '';
+    const goalsToDisplay = monthlyGoals.filter(goal => !completedMonthlyGoals[goal.id]);
+
+    if (goalsToDisplay.length === 0) {
+        goalsListContainer.style.display = 'none';
+        goalsEmptyState.style.display = 'block';
+    } else {
+        goalsListContainer.style.display = 'block';
+        goalsEmptyState.style.display = 'none';
+        goalsToDisplay.forEach(goal => {
+            const goalItem = document.createElement('li');
+            goalItem.className = `goal-item ${completedMonthlyGoals[goal.id] ? 'completed' : ''}`;
+            goalItem.setAttribute('data-goal-id', goal.id);
+
+            goalItem.innerHTML = `
+                <div class="goal-checkbox ${completedMonthlyGoals[goal.id] ? 'checked' : ''}" data-goal-id="${goal.id}"></div>
+                <div class="goal-text">
+                    ${goal.title}
+                    ${goal.subgoal ? `<br><small style="opacity: 0.8; font-style: italic;">${goal.subgoal}</small>` : ''}
+                </div>
+            `;
+            goalsListContainer.appendChild(goalItem);
+        });
+
+        // Add event listeners to new checkboxes
+        goalsListContainer.querySelectorAll('.goal-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('click', (e) => {
+                const goalId = e.target.getAttribute('data-goal-id');
+                toggleMonthlyGoalCompletion(goalId);
+            });
+        });
+    }
+}
+
+// Function to toggle monthly goal completion
+function toggleMonthlyGoalCompletion(goalId) {
+    if (completedMonthlyGoals[goalId]) {
+        delete completedMonthlyGoals[goalId];
+    } else {
+        completedMonthlyGoals[goalId] = true;
+    }
+    saveCompletedMonthlyGoals(completedMonthlyGoals);
+    renderMonthlyGoals(); // Re-render to update display
+}
+
+
+// Open monthly goals panel
+monthlyGoalsBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    monthlyGoalsOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    renderMonthlyGoals(); // Render goals every time it opens
+});
+
+// Close monthly goals panel
+function closeMonthlyGoalsPanel() {
+    monthlyGoalsOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+closeMonthlyGoalsBtn.addEventListener('click', closeMonthlyGoalsPanel);
+
+// Close when clicking outside the panel
+monthlyGoalsOverlay.addEventListener('click', (e) => {
+    if (e.target === monthlyGoalsOverlay) {
+        closeMonthlyGoalsPanel();
+    }
+});
+
+// Close with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && monthlyGoalsOverlay.classList.contains('active')) {
+        closeMonthlyGoalsPanel();
+    }
+});
+
+// Initialize monthly goals on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+    monthlyGoals = parseMonthlyGoals(monthlyGoalsData);
+    renderMonthlyGoals(); // Initial render on page load
+});
