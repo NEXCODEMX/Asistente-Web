@@ -682,13 +682,13 @@
 
      // Datos financieros iniciales
         let financialData = {
-            totalWealth: 15264.96, // 9,151.74 banco + 1,500 efectivo + 2,612 cetes
-            bankBalance: 9151.74, //Banco
-            cashBalance: 1468.00, // Efectivo
-            cetesBalance: 4645.22,  // CETES
-            savings: 5394.90, // Ahorros (50% de nómina)
-            investments: 4645.22, // Inversiones (30% de nómina)
-            expenses: 69345.18, // Gastos (20% de nómina)
+            totalWealth: 13317.53, 
+            bankBalance: 7963.73,  // Banco
+            cashBalance: 700,      // Efectivo
+            cetesBalance: 4653.80, // CETES
+            savings: 6658.77,      // 50%
+            investments: 3995.26,  // 30%
+            expenses: 71301.19,    // 20% del total pasado, pero ya no afecta
             transactions: [
                 {   
                     date: '2025-06-20',
@@ -709,9 +709,27 @@
                     type: 'expense'
                 },
                 {   
-                    date: '2025-06-20',
+                    date: '2025-07-10',
                     amount: 4371.62,
                     description: 'Camara Profesional',
+                    type: 'expense'
+                },
+                {   
+                    date: '2025-07-10',
+                    amount: 600.,
+                    description: 'Clases Canto Domingo Dery',
+                    type: 'expense'
+                },
+                {   
+                    date: '2025-07-10',
+                    amount: 588.01,
+                    description: 'Marie',
+                    type: 'expense'
+                },
+                {   
+                    date: '2025-07-10',
+                    amount: 768,
+                    description: 'Marie, Alonso, Transporte',
                     type: 'expense'
                 },
             ],
