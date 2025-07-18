@@ -682,13 +682,13 @@
 
      // Datos financieros iniciales
         let financialData = {
-            totalWealth: 13317.53, 
-            bankBalance: 7963.73,  // Banco
-            cashBalance: 700,      // Efectivo
-            cetesBalance: 4653.80, // CETES
-            savings: 6658.77,      // 50%
-            investments: 3995.26,  // 30%
-            expenses: 71301.19,    // 20% del total pasado, pero ya no afecta
+            totalWealth: 16324.15, 
+            bankBalance: 9863.73,  // Banco
+            cashBalance: 900,      // Efectivo
+            cetesBalance: 5560.42, // CETES
+            savings: 8162.08,      // 50%
+            investments: 4897.25,  // 30%
+            expenses: 71501.19,    // 20% del total pasado, pero ya no afecta
             transactions: [
                 {   
                     date: '2025-06-20',
@@ -730,6 +730,12 @@
                     date: '2025-07-10',
                     amount: 768,
                     description: 'Marie, Alonso, Transporte',
+                    type: 'expense'
+                },
+                {   
+                    date: '2025-07-10',
+                    amount: 200,
+                    description: 'AT&T Recarga',
                     type: 'expense'
                 },
             ],
