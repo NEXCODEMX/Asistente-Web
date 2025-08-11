@@ -294,16 +294,16 @@
                 { "title": "Traslado a universidad (camión)", "type": "important", "completed": false }
             ],
             "17:00": [
-                { "title": "Clase: Sistemas Digitales", "type": "university", "completed": false }
+                { "title": "Sistemas Digitales", "type": "university", "completed": false }
             ],
             "18:00": [
-                { "title": "Clase: Sistemas Digitales", "type": "university", "completed": false }
+                { "title": "Sistemas Digitales", "type": "university", "completed": false }
             ],
             "19:00": [
-                { "title": "Clase: Programación Orientada a Objetos", "type": "university", "completed": false }
+                { "title": "Programación Orientada a Objetos", "type": "university", "completed": false }
             ],
             "20:00": [
-                { "title": "Clase: Programación Orientada a Objetos", "type": "university", "completed": false }
+                { "title": "Programación Orientada a Objetos", "type": "university", "completed": false }
             ],
             "21:00": [
                 { "title": "Regreso de universidad (camión)", "type": "important", "completed": false }
@@ -375,16 +375,16 @@
                 { "title": "Traslado a universidad (camión)", "type": "important", "completed": false }
             ],
             "17:00": [
-                { "title": "Circuitos Electrónicos y Electromagnetismo (Clase)", "type": "university", "completed": false }
+                { "title": "Circuitos Electrónicos y Electromagnetismo", "type": "university", "completed": false }
             ],
             "18:00": [
-                { "title": "Circuitos Electrónicos y Electromagnetismo (Clase)", "type": "university", "completed": false }
+                { "title": "Circuitos Electrónicos y Electromagnetismo", "type": "university", "completed": false }
             ],
             "19:00": [
-                { "title": "Circuitos Electrónicos y Electromagnetismo (Clase)", "type": "university", "completed": false }
+                { "title": "Circuitos Electrónicos y Electromagnetismo", "type": "university", "completed": false }
             ],
             "20:00": [
-                { "title": "Circuitos Electrónicos y Electromagnetismo (Clase)", "type": "university", "completed": false }
+                { "title": "Circuitos Electrónicos y Electromagnetismo", "type": "university", "completed": false }
             ],
             "21:00": [
                 { "title": "Regreso de universidad (camión)", "type": "important", "completed": false }
@@ -411,16 +411,16 @@
                 { "title": "Traslado a universidad (camión)", "type": "important", "completed": false }
             ],
             "7:00": [
-                { "title": "Ingeniería de Software (Clase)", "type": "university", "completed": false }
+                { "title": "Ingeniería de Software", "type": "university", "completed": false }
             ],
             "8:00": [
-                { "title": "Ingeniería de Software (Clase)", "type": "university", "completed": false }
+                { "title": "Ingeniería de Software", "type": "university", "completed": false }
             ],
             "9:00": [
-                { "title": "Ingeniería de Software (Clase)", "type": "university", "completed": false }
+                { "title": "Ingeniería de Software", "type": "university", "completed": false }
             ],
             "10:00": [
-                { "title": "Ingeniería de Software (Clase)", "type": "university", "completed": false }
+                { "title": "Ingeniería de Software", "type": "university", "completed": false }
             ],
              "11:00": [
                 { "title": "Regreso de universidad (camión)", "type": "important", "completed": false }
