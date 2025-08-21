@@ -511,13 +511,13 @@
 
      // Datos financieros iniciales
         let financialData = {
-            totalWealth: 14990.07, 
-            bankBalance: 7600.73,  // Banco
-            cashBalance: 900,      // Efectivo
-            cetesBalance: 6489.34, // CETES
-            savings: 7495.04,      // 50%
-            investments: 4497.02,  // 30%
-            expenses: 75501.19,    // 20% del total pasado, pero ya no afecta
+            totalWealth: 17182.41, 
+            bankBalance: 8978.91,  // Banco
+            cashBalance: 800,      // Efectivo
+            cetesBalance: 7403.50, // CETES
+            savings: 8591.21,      // 50%
+            investments: 5154.72,  // 30%
+            expenses: 78501.19,    // 20% del total pasado, pero ya no afecta
             transactions: [
                 {   
                     date: '2025-06-20',
