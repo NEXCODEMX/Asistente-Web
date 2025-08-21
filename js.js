@@ -1,477 +1,302 @@
   // Sample JSON data - You can modify this to add your tasks
         const tasksData = {
             "monday": {
-            "0:00": [
-                { "title": "Dormir", "type": "important", "completed": false }
-            ],
-            "5:00": [
-                { "title": "Dormir", "type": "important", "completed": false }
-            ],
-            "6:00": [
-                { "title": "Pasear perros", "type": "leisure", "completed": false },
-                { "title": "Desayunar", "type": "important", "completed": false },
-                { "title": "Lavar dientes", "type": "important", "completed": false },
-                { "title": "Lavar trastes", "type": "important", "completed": false },
-                { "title": "Meditar", "type": "leisure", "completed": false }
-            ],
-            "7:00": [
-                { "title": "Gym", "type": "leisure", "completed": false }
-            ],
-            "8:00": [
-                { "title": "Ducharme", "type": "important", "completed": false },
-                { "title": "Hacer del baño", "type": "important", "completed": false },
-                { "title": "Hacer rachas", "type": "important", "completed": false }
-            ],
-            "9:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "CV WEB", "type": "project", "completed": false }
-            ],
-            "10:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "CV WEB", "type": "project", "completed": false }
-            ],
-            "11:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Curso SQL", "type": "university", "completed": false }
-            ],
-            "12:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Curso SQL", "type": "university", "completed": false }
-            ],
-            "13:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "CUCEI MART", "type": "project", "completed": false }
-            ],
-            "14:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Comer", "type": "important", "completed": false },
-                { "title": "Lavar trastes", "type": "important", "completed": false },
-                { "title": "Pasear perritos", "type": "leisure", "completed": false }
-            ],
-            "15:00": [
-                { "title": "Traslado a universidad (camión)", "type": "important", "completed": false }
-            ],
-            "16:00": [
-                { "title": "Traslado a universidad (camión)", "type": "important", "completed": false }
-            ],
-            "17:00": [
-                { "title": "Innovación y Tecnología", "type": "university", "completed": false }
-            ],
-            "18:00": [
-                { "title": "Innovación y Tecnología", "type": "university", "completed": false }
-            ],
-            "19:00": [
-                { "title": "Regreso de universidad (camión)", "type": "important", "completed": false }
-            ],
-            "20:00": [
-                { "title": "Regreso de universidad (camión)", "type": "important", "completed": false }
-            ],
-            "21:00": [
-                { "title": "Alonso Restaurantes", "type": "leisure", "completed": false }
-            ],
-            "22:00": [
-                { "title": "Alonso Restaurantes", "type": "leisure", "completed": false }
-            ],
-            "23:00": [
-                { "title": "Alonso Restaurantes", "type": "leisure", "completed": false },
-                { "title": "Cenar", "type": "important", "completed": false },
-                { "title": "Lavarme los dientes", "type": "important", "completed": false },
-                { "title": "Lavar los trastes", "type": "important", "completed": false }
-            ]
-        },
+        "0:00": [
+            {"title": "Dormir", "type": "important", "duration_minutes": 360, "start_offset_minutes": 0}
+        ],
+        "6:00": [
+            {"title": "Pasear perros", "type": "leisure", "duration_minutes": 15, "start_offset_minutes": 0},
+            {"title": "Desayunar", "type": "important", "duration_minutes": 5, "start_offset_minutes": 15},
+            {"title": "Lavar dientes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 20},
+            {"title": "Lavar trastes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 25},
+            {"title": "Meditar", "type": "leisure", "duration_minutes": 30, "start_offset_minutes": 30}
+        ],
+        "7:00": [
+            {"title": "Gym", "type": "leisure", "duration_minutes": 60, "start_offset_minutes": 0}
+        ],
+        "8:00": [
+            {"title": "Ducharme", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+            {"title": "Hacer del baño", "type": "important", "duration_minutes": 15, "start_offset_minutes": 15},
+            {"title": "Hacer rachas", "type": "important", "duration_minutes": 10, "start_offset_minutes": 5}
+        ],
+        "9:00": [
+            {"title": "Derevo", "type": "work", "duration_minutes": 180, "start_offset_minutes": 0},
+            {"title": "CV WEB", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
+        ],
+        "11:00": [
+            {"title": "Curso SQL", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+        ],
+        "13:00": [
+            {"title": "CUCEI MART", "type": "project", "duration_minutes": 60, "start_offset_minutes": 0}
+        ],
+        "14:00": [
+            {"title": "Comer", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+            {"title": "Lavar trastes", "type": "important", "duration_minutes": 10, "start_offset_minutes": 15},
+            {"title": "Pasear perritos", "type": "leisure", "duration_minutes": 15, "start_offset_minutes": 25}
+        ],
+        "15:00": [
+            {"title": "Traslado a universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+        ],
+        "17:00": [
+            {"title": "Innovación y Tecnología", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+        ],
+        "19:00": [
+            {"title": "Regreso de universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+        ],
+        "21:00": [
+            {"title": "Alonso Restaurantes", "type": "leisure", "duration_minutes": 120, "start_offset_minutes": 0}
+        ],
+        "23:00": [
+            {"title": "Cenar", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+            {"title": "Lavarme los dientes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 15},
+            {"title": "Lavar los trastes", "type": "important", "duration_minutes": 10, "start_offset_minutes": 20}
+        ]
+    },
 
            "tuesday": {
             "0:00": [
-                { "title": "Dormir", "type": "important", "completed": false }
-            ],
-            "5:00": [
-                { "title": "Dormir", "type": "important", "completed": false }
+                {"title": "Dormir", "type": "important", "duration_minutes": 360, "start_offset_minutes": 0}
             ],
             "6:00": [
-                { "title": "Pasear perros", "type": "leisure", "completed": false },
-                { "title": "Desayunar", "type": "important", "completed": false },
-                { "title": "Lavar dientes", "type": "important", "completed": false },
-                { "title": "Lavar trastes", "type": "important", "completed": false },
-                { "title": "Meditar", "type": "leisure", "completed": false }
+                {"title": "Pasear perros", "type": "leisure", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Desayunar", "type": "important", "duration_minutes": 5, "start_offset_minutes": 15},
+                {"title": "Lavar dientes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 20},
+                {"title": "Lavar trastes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 25},
+                {"title": "Meditar", "type": "leisure", "duration_minutes": 30, "start_offset_minutes": 30}
             ],
             "7:00": [
-                { "title": "Gym", "type": "leisure", "completed": false }
+                {"title": "Gym", "type": "leisure", "duration_minutes": 60, "start_offset_minutes": 0}
             ],
             "8:00": [
-                { "title": "Ducharme", "type": "important", "completed": false },
-                { "title": "Hacer del baño", "type": "important", "completed": false },
-                { "title": "Hacer rachas", "type": "important", "completed": false }
+                {"title": "Ducharme", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Hacer del baño", "type": "important", "duration_minutes": 15, "start_offset_minutes": 15},
+                {"title": "Hacer rachas", "type": "important", "duration_minutes": 10, "start_offset_minutes": 5}
             ],
             "9:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "NEXCODE", "type": "project", "completed": false }
-            ],
-            "10:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "NEXCODE", "type": "project", "completed": false }
+                {"title": "Derevo", "type": "work", "duration_minutes": 180, "start_offset_minutes": 0},
+                {"title": "NEXCODE", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "11:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Curso SQL", "type": "university", "completed": false }
-            ],
-            "12:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Curso SQL", "type": "university", "completed": false }
+                {"title": "Curso SQL", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "13:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "NEXCODE", "type": "project", "completed": false }
+                {"title": "NEXCODE", "type": "project", "duration_minutes": 60, "start_offset_minutes": 0}
             ],
             "14:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Comer", "type": "important", "completed": false },
-                { "title": "Lavar trastes", "type": "important", "completed": false },
-                { "title": "Pasear perritos", "type": "leisure", "completed": false }
+                {"title": "Comer", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Lavar trastes", "type": "important", "duration_minutes": 10, "start_offset_minutes": 15},
+                {"title": "Pasear perritos", "type": "leisure", "duration_minutes": 15, "start_offset_minutes": 25}
             ],
             "15:00": [
-                { "title": "Traslado a universidad (camión)", "type": "important", "completed": false }
-            ],
-            "16:00": [
-                { "title": "Traslado a universidad (camión)", "type": "important", "completed": false }
+                {"title": "Traslado a universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "17:00": [
-                { "title": "Sistemas Digitales", "type": "university", "completed": false }
-            ],
-            "18:00": [
-                { "title": "Sistemas Digitales", "type": "university", "completed": false }
+                {"title": "Sistemas Digitales", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "19:00": [
-                { "title": "Programación Orientada a Objetos", "type": "university", "completed": false }
-            ],
-            "20:00": [
-                { "title": "Programación Orientada a Objetos", "type": "university", "completed": false }
+                {"title": "Programación Orientada a Objetos", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "21:00": [
-                { "title": "Regreso de universidad (camión)", "type": "important", "completed": false }
-            ],
-            "22:00": [
-                { "title": "Regreso de universidad (camión)", "type": "important", "completed": false },
-                { "title": "Inceptions", "type": "project", "completed": false }
+                {"title": "Regreso de universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "23:00": [
-                { "title": "Cenar", "type": "important", "completed": false },
-                { "title": "Lavarme los dientes", "type": "important", "completed": false },
-                { "title": "Lavar los trastes", "type": "important", "completed": false }
+                {"title": "Cenar", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Lavarme los dientes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 15},
+                {"title": "Lavar los trastes", "type": "important", "duration_minutes": 10, "start_offset_minutes": 20}
             ]
         },
 
-            "wednesday": {
-            "0:00": [
-                { "title": "Dormir", "type": "important", "completed": false }
-            ],
-            "5:00": [
-                { "title": "Dormir", "type": "important", "completed": false }
-            ],
-            "6:00": [
-                { "title": "Pasear perros", "type": "leisure", "completed": false },
-                { "title": "Desayunar", "type": "important", "completed": false },
-                { "title": "Lavar dientes", "type": "important", "completed": false },
-                { "title": "Lavar trastes", "type": "important", "completed": false },
-                { "title": "Meditar", "type": "leisure", "completed": false }
-            ],
-            "7:00": [
-                { "title": "Gym", "type": "leisure", "completed": false }
-            ],
-            "8:00": [
-                { "title": "Ducharme", "type": "important", "completed": false },
-                { "title": "Hacer del baño", "type": "important", "completed": false },
-                { "title": "Hacer rachas", "type": "important", "completed": false }
-            ],
-            "9:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "CUCEI MART", "type": "project", "completed": false }
-            ],
-            "10:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "CUCEI MART", "type": "project", "completed": false }
-            ],
-            "11:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Curso SQL", "type": "university", "completed": false }
-            ],
-            "12:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Curso SQL", "type": "university", "completed": false }
-            ],
-            "13:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "CUCEI MART", "type": "project", "completed": false }
-            ],
-            "14:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Comer", "type": "important", "completed": false },
-                { "title": "Lavar trastes", "type": "important", "completed": false },
-                { "title": "Pasear perritos", "type": "leisure", "completed": false }
-            ],
-            "15:00": [
-                 { "title": "Traslado a universidad (camión)", "type": "important", "completed": false }
-            ],
-            "16:00": [
-                 { "title": "Traslado a universidad (camión)", "type": "important", "completed": false }
-            ],
-            "17:00": [
-                { "title": "Clase: Innovación y Tecnología", "type": "university", "completed": false }
-            ],
-            "18:00": [
-                { "title": "Clase: Innovación y Tecnología", "type": "university", "completed": false }
-            ],
-            "19:00": [
-                { "title": "Regreso de universidad (camión)", "type": "important", "completed": false }
-            ],
-            "20:00": [
-                { "title": "Regreso de universidad (camión)", "type": "important", "completed": false }
-            ],
-            "21:00": [
-                { "title": "Composición", "type": "leisure", "completed": false }
-            ],
-            "22:00": [
-                { "title": "Composición", "type": "leisure", "completed": false }
-            ],
-            "23:00": [
-                { "title": "Composición", "type": "leisure", "completed": false },
-                { "title": "Cenar", "type": "important", "completed": false },
-                { "title": "Lavarme los dientes", "type": "important", "completed": false },
-                { "title": "Lavar los trastes", "type": "important", "completed": false }
-            ]
-        },
-            "thursday": {
-            "0:00": [
-                { "title": "Dormir", "type": "important", "completed": false }
-            ],
-            "5:00": [
-                { "title": "Dormir", "type": "important", "completed": false }
-            ],
-            "6:00": [
-                { "title": "Pasear perros", "type": "leisure", "completed": false },
-                { "title": "Desayunar", "type": "important", "completed": false },
-                { "title": "Lavar dientes", "type": "important", "completed": false },
-                { "title": "Lavar trastes", "type": "important", "completed": false },
-                { "title": "Meditar", "type": "leisure", "completed": false }
-            ],
-            "7:00": [
-                { "title": "Gym", "type": "leisure", "completed": false }
-            ],
-            "8:00": [
-                { "title": "Ducharme", "type": "important", "completed": false },
-                { "title": "Hacer del baño", "type": "important", "completed": false },
-                { "title": "Hacer rachas", "type": "important", "completed": false }
-            ],
-            "9:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "NEXCODE", "type": "project", "completed": false }
-            ],
-            "10:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "NEXCODE", "type": "project", "completed": false }
-            ],
-            "11:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Curso SQL", "type": "university", "completed": false }
-            ],
-            "12:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Curso SQL", "type": "university", "completed": false }
-            ],
-            "13:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "NEXCODE", "type": "project", "completed": false }
-            ],
-            "14:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Comer", "type": "important", "completed": false },
-                { "title": "Lavar trastes", "type": "important", "completed": false },
-                { "title": "Pasear perritos", "type": "leisure", "completed": false }
-            ],
-            "15:00": [
-                { "title": "Traslado a universidad (camión)", "type": "important", "completed": false }
-            ],
-            "16:00": [
-                { "title": "Traslado a universidad (camión)", "type": "important", "completed": false }
-            ],
-            "17:00": [
-                { "title": "Sistemas Digitales", "type": "university", "completed": false }
-            ],
-            "18:00": [
-                { "title": "Sistemas Digitales", "type": "university", "completed": false }
-            ],
-            "19:00": [
-                { "title": "Programación Orientada a Objetos", "type": "university", "completed": false }
-            ],
-            "20:00": [
-                { "title": "Programación Orientada a Objetos", "type": "university", "completed": false }
-            ],
-            "21:00": [
-                { "title": "Regreso de universidad (camión)", "type": "important", "completed": false }
-            ],
-            "22:00": [
-                { "title": "Regreso de universidad (camión)", "type": "important", "completed": false },
-                { "title": "Inceptions", "type": "project", "completed": false }
 
-            ],
-            "23:00": [
-                { "title": "Cenar", "type": "important", "completed": false },
-                { "title": "Lavarme los dientes", "type": "important", "completed": false },
-                { "title": "Lavar los trastes", "type": "important", "completed": false }
-            ]
-        },
-             "friday": {
+                "wednesday": {
             "0:00": [
-                { "title": "Dormir", "type": "important", "completed": false }
-            ],
-            "5:00": [
-                { "title": "Dormir", "type": "important", "completed": false }
+                {"title": "Dormir", "type": "important", "duration_minutes": 360, "start_offset_minutes": 0}
             ],
             "6:00": [
-                { "title": "Pasear perros", "type": "leisure", "completed": false },
-                { "title": "Desayunar", "type": "important", "completed": false },
-                { "title": "Lavar dientes", "type": "important", "completed": false },
-                { "title": "Lavar trastes", "type": "important", "completed": false },
-                { "title": "Meditar", "type": "leisure", "completed": false }
+                {"title": "Pasear perros", "type": "leisure", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Desayunar", "type": "important", "duration_minutes": 5, "start_offset_minutes": 15},
+                {"title": "Lavar dientes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 20},
+                {"title": "Lavar trastes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 25},
+                {"title": "Meditar", "type": "leisure", "duration_minutes": 30, "start_offset_minutes": 30}
             ],
             "7:00": [
-                { "title": "Gym", "type": "leisure", "completed": false }
+                {"title": "Gym", "type": "leisure", "duration_minutes": 60, "start_offset_minutes": 0}
             ],
             "8:00": [
-                { "title": "Ducharme", "type": "important", "completed": false },
-                { "title": "Hacer del baño", "type": "important", "completed": false },
-                { "title": "Hacer rachas", "type": "important", "completed": false }
+                {"title": "Ducharme", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Hacer del baño", "type": "important", "duration_minutes": 15, "start_offset_minutes": 15},
+                {"title": "Hacer rachas", "type": "important", "duration_minutes": 10, "start_offset_minutes": 5}
             ],
             "9:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Youtube", "type": "project", "completed": false }
-            ],
-            "10:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Youtube", "type": "project", "completed": false }
+                {"title": "Derevo", "type": "work", "duration_minutes": 180, "start_offset_minutes": 0},
+                {"title": "CUCEI MART", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "11:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Youtube", "type": "project", "completed": false }
-            ],
-            "12:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Youtube", "type": "project", "completed": false }
+                {"title": "Curso SQL", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "13:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Youtube", "type": "project", "completed": false }
+                {"title": "CUCEI MART", "type": "project", "duration_minutes": 60, "start_offset_minutes": 0}
             ],
             "14:00": [
-                { "title": "Derevo", "type": "work", "completed": false },
-                { "title": "Comer", "type": "important", "completed": false },
-                { "title": "Lavar trastes", "type": "important", "completed": false },
-                { "title": "Pasear perritos", "type": "leisure", "completed": false },
-                { "title": "Youtube", "type": "project", "completed": false }
-            ],
-             "15:00": [
-                { "title": "Traslado a universidad (camión)", "type": "important", "completed": false }
-            ],
-            "16:00": [
-                { "title": "Traslado a universidad (camión)", "type": "important", "completed": false }
-            ],
-            "17:00": [
-                { "title": "Circuitos Electrónicos y Electromagnetismo", "type": "university", "completed": false }
-            ],
-            "18:00": [
-                { "title": "Circuitos Electrónicos y Electromagnetismo", "type": "university", "completed": false }
-            ],
-            "19:00": [
-                { "title": "Circuitos Electrónicos y Electromagnetismo", "type": "university", "completed": false }
-            ],
-            "20:00": [
-                { "title": "Circuitos Electrónicos y Electromagnetismo", "type": "university", "completed": false }
-            ],
-            "21:00": [
-                { "title": "Regreso de universidad (camión)", "type": "important", "completed": false }
-            ],
-            "22:00": [
-                { "title": "Regreso de universidad (camión)", "type": "important", "completed": false },
-                { "title": "Ensayo", "type": "project", "completed": false }
-
-            ],
-            "23:00": [
-                { "title": "Cenar", "type": "important", "completed": false },
-                { "title": "Lavarme los dientes", "type": "important", "completed": false },
-                { "title": "Lavar los trastes", "type": "important", "completed": false }
-            ]
-        },
-        "saturday": {
-            "0:00": [
-                { "title": "Dormir", "type": "important", "completed": false }
-            ],
-            "5:00": [
-                { "title": "Desayunar", "type": "important", "completed": false }
-            ],
-            "6:00": [
-                { "title": "Traslado a universidad (camión)", "type": "important", "completed": false }
-            ],
-            "7:00": [
-                { "title": "Ingeniería de Software", "type": "university", "completed": false }
-            ],
-            "8:00": [
-                { "title": "Ingeniería de Software", "type": "university", "completed": false }
-            ],
-            "9:00": [
-                { "title": "Ingeniería de Software", "type": "university", "completed": false }
-            ],
-            "10:00": [
-                { "title": "Ingeniería de Software", "type": "university", "completed": false }
-            ],
-             "11:00": [
-                { "title": "Regreso de universidad (camión)", "type": "important", "completed": false }
-            ],
-            "12:00": [
-                { "title": "Regreso de universidad (camión)", "type": "important", "completed": false }
-            ],
-             "21:00": [
-                { "title": "Alonso Restaurantes", "type": "leisure", "completed": false }
-            ],
-            "22:00": [
-                { "title": "Alonso Restaurantes", "type": "leisure", "completed": false }
-            ],
-            "23:00": [
-                { "title": "Alonso Restaurantes", "type": "leisure", "completed": false },
-                { "title": "Cenar", "type": "important", "completed": false },
-                { "title": "Lavarme los dientes", "type": "important", "completed": false },
-                { "title": "Lavar los trastes", "type": "important", "completed": false }
-            ]
-        },
-           "sunday": {
-            "0:00": [
-                { "title": "Dormir", "type": "important", "completed": false }
-            ],
-            "6:00": [
-            ],
-            "7:00": [
-                // Aquí podrías poner actividades si quieres
-            ],
-            "8:00": [
-                // Espacio libre
-            ],
-            "9:00": [
-                // Espacio libre
-            ],
-            "10:00": [
-                { "title": "Clase Canto Dery", "type": "important", "completed": false }
-            ],
-            "11:00": [
-            ],
-            "12:00": [
-                { "title": "Clase Programación Paulo", "type": "important", "completed": false }
-            ],
-            "13:00": [
-                { "title": "Clase Programación Paulo", "type": "important", "completed": false }
-            ],
-            "14:00": [
-                // Fin de clase, espacio libre para otras actividades
+                {"title": "Comer", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Lavar trastes", "type": "important", "duration_minutes": 10, "start_offset_minutes": 15},
+                {"title": "Pasear perritos", "type": "leisure", "duration_minutes": 15, "start_offset_minutes": 25}
             ],
             "15:00": [
-                // Más actividades o descanso
+                {"title": "Traslado a universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+            ],
+            "17:00": [
+                {"title": "Innovación y Tecnología", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+            ],
+            "19:00": [
+                {"title": "Regreso de universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+            ],
+            "21:00": [
+                {"title": "Composición", "type": "leisure", "duration_minutes": 120, "start_offset_minutes": 0}
+            ],
+            "23:00": [
+                {"title": "Cenar", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Lavarme los dientes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 15},
+                {"title": "Lavar los trastes", "type": "important", "duration_minutes": 10, "start_offset_minutes": 20}
+            ]
+        },
+                "thursday": {
+            "0:00": [
+                {"title": "Dormir", "type": "important", "duration_minutes": 360, "start_offset_minutes": 0}
+            ],
+            "6:00": [
+                {"title": "Pasear perros", "type": "leisure", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Desayunar", "type": "important", "duration_minutes": 5, "start_offset_minutes": 15},
+                {"title": "Lavar dientes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 20},
+                {"title": "Lavar trastes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 25},
+                {"title": "Meditar", "type": "leisure", "duration_minutes": 30, "start_offset_minutes": 30}
+            ],
+            "7:00": [
+                {"title": "Gym", "type": "leisure", "duration_minutes": 60, "start_offset_minutes": 0}
+            ],
+            "8:00": [
+                {"title": "Ducharme", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Hacer del baño", "type": "important", "duration_minutes": 15, "start_offset_minutes": 15},
+                {"title": "Hacer rachas", "type": "important", "duration_minutes": 10, "start_offset_minutes": 5}
+            ],
+            "9:00": [
+                {"title": "Derevo", "type": "work", "duration_minutes": 180, "start_offset_minutes": 0},
+                {"title": "NEXCODE", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
+            ],
+            "11:00": [
+                {"title": "Curso SQL", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+            ],
+            "13:00": [
+                {"title": "NEXCODE", "type": "project", "duration_minutes": 60, "start_offset_minutes": 0}
+            ],
+            "14:00": [
+                {"title": "Comer", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Lavar trastes", "type": "important", "duration_minutes": 10, "start_offset_minutes": 15},
+                {"title": "Pasear perritos", "type": "leisure", "duration_minutes": 15, "start_offset_minutes": 25}
+            ],
+            "15:00": [
+                {"title": "Traslado a universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+            ],
+            "17:00": [
+                {"title": "Sistemas Digitales", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+            ],
+            "19:00": [
+                {"title": "Programación Orientada a Objetos", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+            ],
+            "21:00": [
+                {"title": "Regreso de universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+            ],
+            "23:00": [
+                {"title": "Cenar", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Lavarme los dientes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 15},
+                {"title": "Lavar los trastes", "type": "important", "duration_minutes": 10, "start_offset_minutes": 20}
+            ]
+        },
+
+        "friday": {
+            "0:00": [
+                {"title": "Dormir", "type": "important", "duration_minutes": 360, "start_offset_minutes": 0}
+            ],
+            "6:00": [
+                {"title": "Pasear perros", "type": "leisure", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Desayunar", "type": "important", "duration_minutes": 5, "start_offset_minutes": 15},
+                {"title": "Lavar dientes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 20},
+                {"title": "Lavar trastes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 25},
+                {"title": "Meditar", "type": "leisure", "duration_minutes": 30, "start_offset_minutes": 30}
+            ],
+            "7:00": [
+                {"title": "Gym", "type": "leisure", "duration_minutes": 60, "start_offset_minutes": 0}
+            ],
+            "8:00": [
+                {"title": "Ducharme", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Hacer del baño", "type": "important", "duration_minutes": 15, "start_offset_minutes": 15},
+                {"title": "Hacer rachas", "type": "important", "duration_minutes": 10, "start_offset_minutes": 5}
+            ],
+            "9:00": [
+                {"title": "Derevo", "type": "work", "duration_minutes": 180, "start_offset_minutes": 0},
+                {"title": "Youtube", "type": "project", "duration_minutes": 180, "start_offset_minutes": 0}
+            ],
+            "14:00": [
+                {"title": "Comer", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Lavar trastes", "type": "important", "duration_minutes": 10, "start_offset_minutes": 15},
+                {"title": "Pasear perritos", "type": "leisure", "duration_minutes": 15, "start_offset_minutes": 25}
+            ],
+            "15:00": [
+                {"title": "Traslado a universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+            ],
+            "17:00": [
+                {"title": "Circuitos Electrónicos y Electromagnetismo", "type": "university", "duration_minutes": 240, "start_offset_minutes": 0}
+            ],
+            "21:00": [
+                {"title": "Regreso de universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+            ],
+            "23:00": [
+                {"title": "Cenar", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Lavarme los dientes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 15},
+                {"title": "Lavar los trastes", "type": "important", "duration_minutes": 10, "start_offset_minutes": 20}
+            ]
+        },
+
+            "saturday": {
+            "0:00": [
+                {"title": "Dormir", "type": "important", "duration_minutes": 300, "start_offset_minutes": 0}
+            ],
+            "5:00": [
+                {"title": "Desayunar", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0}
+            ],
+            "6:00": [
+                {"title": "Traslado a universidad (camión)", "type": "important", "duration_minutes": 60, "start_offset_minutes": 0}
+            ],
+            "7:00": [
+                {"title": "Ingeniería de Software", "type": "university", "duration_minutes": 240, "start_offset_minutes": 0}
+            ],
+            "11:00": [
+                {"title": "Regreso de universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+            ],
+            "21:00": [
+                {"title": "Alonso Restaurantes", "type": "leisure", "duration_minutes": 180, "start_offset_minutes": 0}
+            ],
+            "23:00": [
+                {"title": "Cenar", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Lavarme los dientes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 15},
+                {"title": "Lavar los trastes", "type": "important", "duration_minutes": 10, "start_offset_minutes": 20}
+            ]
+        },
+
+                "sunday": {
+            "0:00": [
+                {"title": "Dormir", "type": "important", "duration_minutes": 360, "start_offset_minutes": 0}
+            ],
+            "10:00": [
+                {"title": "Clase Canto Dery", "type": "important", "duration_minutes": 60, "start_offset_minutes": 0}
+            ],
+            "12:00": [
+                {"title": "Clase Programación Paulo", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+            ],
+            "14:00": [
+                {"title": "Espacio libre", "type": "leisure", "duration_minutes": 60, "start_offset_minutes": 0}
+            ],
+            "15:00": [
+                {"title": "Más actividades o descanso", "type": "leisure", "duration_minutes": 540, "start_offset_minutes": 0}
             ]
         },
 
