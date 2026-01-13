@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ragknos Demian - Links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+            background: #0a0a0a;
+        }
+
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s ease;
+        }
+
+        #bgVideo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 2;
+        }
+
+        .language-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+            background: rgba(20, 20, 20, 0.8);
+            padding: 10px 15px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: #888;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            color: #fff;
+            background: rgba(138, 43, 226, 0.4);
+        }
+
+        .lang-btn:hover {
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            width: 90%;
+            max-width: 450px;
+            background: rgba(15, 15, 25, 0.85);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6),
+                        0 0 40px rgba(138, 43, 226, 0.2);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            margin: 140px 0;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-pic-wrapper {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease;
+        }
+
+        #profileVideo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: scale-down;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.8);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .profile-pic-wrapper.video-active {
+            background-image: url("ImagenFondoAnimacion.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            object-fit: scale-down;
+            border-radius: 50%;
+           
+        }
+
+        .neon-border {
+            position: absolute;
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border: 4px solid #ff00ff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: colorChange 3s infinite;
+            box-shadow: 0 0 20px currentColor,
+                        inset 0 0 20px currentColor;
+        }
+
+        @keyframes colorChange {
+            0%, 100% { border-color: #ff0066; box-shadow: 0 0 20px #ff0066, inset 0 0 20px #ff0066; }
+            33% { border-color: #9933ff; box-shadow: 0 0 20px #9933ff, inset 0 0 20px #9933ff; }
+            66% { border-color: #00ff88; box-shadow: 0 0 20px #00ff88, inset 0 0 20px #00ff88; }
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+            text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+            letter-spacing: 1px;
+        }
+
+        .username {
+            font-size: 16px;
+            color: #aaa;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(30, 30, 40, 0.8);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.4);
+        }
+
+        .social-icon.instagram:hover {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            border-color: #fff;
+        }
+
+        .social-icon.spotify:hover {
+            background: #1DB954;
+            border-color: #fff;
+        }
+
+        .social-icon.youtube:hover {
+            background: #FF0000;
+            border-color: #fff;
+        }
+
+        .social-icon.tiktok:hover {
+            background: linear-gradient(135deg, #00f2ea, #ff0050);
+            border-color: #fff;
+        }
+
+        .link-button {
+            display: block;
+            width: 100%;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            background: rgba(30, 30, 40, 0.8);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.5);
+            border-color: rgba(138, 43, 226, 0.8);
+            background: rgba(40, 40, 50, 0.9);
+        }
+
+        .link-button i {
+            margin-right: 10px;
+        }
+
+        .support-text {
+            font-size: 12px;
+            color: #888;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .contact-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: 16px;
+            color: #aaa;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .contact-email {
+            color: #8a2be2;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .contact-email:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 10px rgba(138, 43, 226, 0.8);
+            transform: scale(1.05);
+        }
+
+        .footer {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 13px;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #8a2be2;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 10px rgba(138, 43, 226, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 30px 20px;
+            }
+
+            .profile-pic-wrapper {
+                width: 120px;
+                height: 120px;
+            }
+
+            .profile-pic, #profileVideo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .neon-border {
+                width: 140px;
+                height: 140px;
+            }
+
+            .name {
+                font-size: 24px;
+            }
+
+            .language-selector {
+                top: 10px;
+                right: 10px;
+                padding: 8px 12px;
+            }
+
+            .social-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .social-icons {
+                gap: 15px;
+            }
+
+            .link-button {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <audio id="introAudio" preload="auto">
+        <source src="intro.wav" type="audio/wav">
+    </audio>
+
+    <div class="background-container">
+        <img src="FotoDeFondoPrincipal.jpg" alt="Background" class="background-image" id="mainBg">
+        <img src="FondoOjos.png" alt="Background Eyes" class="background-image" id="eyesBg" style="opacity: 0;">
+        <video id="bgVideo" autoplay loop muted playsinline>
+            <source src="VideoPsicodelicoFondo.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <div class="language-selector">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <div class="container">
+        <div class="profile-section">
+            <div class="profile-pic-wrapper">
+                <div class="neon-border"></div>
+                <img src="FotoLinkTree1.jpeg" alt="Profile" class="profile-pic" id="profileImg1">
+                <img src="FotoLinkTree2.jpeg" alt="Profile Alt" class="profile-pic" id="profileImg2" style="opacity: 0;">
+                <video id="profileVideo" loop muted playsinline>
+                    <source src="AnimacionSecreta.mp4" type="video/mp4">
+                </video>
+            </div>
+            <h1 class="name">Ragknos Demian</h1>
+            <p class="username">@ragknos_demian</p>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/ragknos_demian" target="_blank" class="social-icon instagram" data-hover="social">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://open.spotify.com/intl-es/track/2wzN7RXUvLT3brNWMCZ2ZC?si=ea46d25c15cf4184" target="_blank" class="social-icon spotify" data-hover="social">
+                <i class="fab fa-spotify"></i>
+            </a>
+            <a href="https://www.youtube.com/@RagknosDemian" target="_blank" class="social-icon youtube" data-hover="social">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@ragknos_demian" target="_blank" class="social-icon tiktok" data-hover="social">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+
+        <a href="https://open.spotify.com/playlist/0x07KNcXprTDBhHacThRt5?si=5566e049b5eb4db9&pt=130ce1e8e42271125e4002acdd9d8a12" target="_blank" class="link-button" data-hover="button" data-text-es="🎵 Playlist" data-text-en="🎵 Playlist">
+            <i class="fas fa-list-ul"></i><span class="btn-text">Playlist</span>
+        </a>
+
+        <a href="#" id="paypalBtn" class="link-button" data-hover="paypal" data-text-es="Apóyame" data-text-en="Support Me">
+            <i class="fab fa-paypal"></i><span class="btn-text">Apóyame</span>
+            <span class="support-text" id="supportText">Tu apoyo significa mucho </span>
+        </a>
+
+        <div class="contact-section">
+            <p class="contact-title" id="contactTitle">Contáctame:</p>
+            <a href="mailto:demianrgz23@gmail.com?subject=Contacto%20desde%20tu%20LinkTree&body=Hola%20Ragknos%20Demian,%0A%0AMe%20gustaría%20ponerme%20en%20contacto%20contigo.%0A%0ASaludos" class="contact-email">demianrgz23@gmail.com</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 <a href="https://github.com/NEXCODEMX" target="_blank">NEXCODE</a>. <span id="rightsText">Todos los derechos reservados</span></p>
+    </div>
+
+    <script>
+        const translations = {
+            es: {
+                contactTitle: 'Contáctame:',
+                supportText: 'Tu apoyo significa mucho ',
+                rightsText: 'Todos los derechos reservados',
+                playlist: 'Playlist',
+                support: 'Apóyame'
+            },
+            en: {
+                contactTitle: 'Contact me:',
+                supportText: 'Your support means a lot ',
+                rightsText: 'All rights reserved',
+                playlist: 'Playlist',
+                support: 'Support Me'
+            }
+        };
+
+        let currentLang = 'es';
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentLang = btn.dataset.lang;
+                updateLanguage();
+            });
+        });
+
+        function updateLanguage() {
+            document.getElementById('contactTitle').textContent = translations[currentLang].contactTitle;
+            document.getElementById('supportText').textContent = translations[currentLang].supportText;
+            document.getElementById('rightsText').textContent = translations[currentLang].rightsText;
+            document.querySelectorAll('.link-button .btn-text')[0].textContent = translations[currentLang].playlist;
+            document.querySelectorAll('.link-button .btn-text')[1].textContent = translations[currentLang].support;
+        }
+
+        window.addEventListener('load', () => {
+            const audio = document.getElementById('introAudio');
+            audio.volume = 0.4;
+            audio.play().catch(e => {
+                document.body.addEventListener('click', () => {
+                    audio.play();
+                }, { once: true });
+            });
+        });
+
+        const mainBg = document.getElementById('mainBg');
+        const eyesBg = document.getElementById('eyesBg');
+        const profileImg1 = document.getElementById('profileImg1');
+        const profileImg2 = document.getElementById('profileImg2');
+        const profileVideo = document.getElementById('profileVideo');
+        const paypalBtn = document.getElementById('paypalBtn');
+
+        const hoverElements = document.querySelectorAll('[data-hover]');
+
+        hoverElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                const hoverType = element.dataset.hover;
+                
+                if (hoverType === 'paypal') {
+                    mainBg.style.opacity = '0';
+                    eyesBg.style.opacity = '1';
+                    profileImg1.style.opacity = '0';
+                    profileImg2.style.opacity = '0';
+                    profileVideo.style.opacity = '1';
+                    profileVideo.play();
+                    document.querySelector('.profile-pic-wrapper').classList.add('video-active');
+
+                } else {
+                    mainBg.style.opacity = '0';
+                    eyesBg.style.opacity = '1';
+                    profileImg1.style.opacity = '0';
+                    profileImg2.style.opacity = '1';
+                }
+            });
+
+            element.addEventListener('mouseleave', () => {
+                mainBg.style.opacity = '1';
+                eyesBg.style.opacity = '0';
+                profileImg1.style.opacity = '1';
+                profileImg2.style.opacity = '0';
+                profileVideo.style.opacity = '0';
+                profileVideo.pause();
+                profileVideo.currentTime = 0;
+                document.querySelector('.profile-pic-wrapper').classList.remove('video-active');
+
+            });
+        });
+
+        paypalBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert(currentLang === 'es' 
+                ? '¡Gracias por tu interés en apoyarme! Por favor configura tu enlace de PayPal.' 
+                : 'Thanks for your interest in supporting me! Please set up your PayPal link.');
+        });
+    </script>
+</body>
+</html>

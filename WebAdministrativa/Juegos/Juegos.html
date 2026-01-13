@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos para Mejorar tu CI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sudoku - Agiliza tu Mente</h1>
+        <div class="controls">
+            <label for="difficulty">Dificultad:</label>
+            <select id="difficulty">
+                <option value="easy">Fácil</option>
+                <option value="medium">Medio</option>
+                <option value="hard">Difícil</option>
+            </select>
+            <button id="new-game">Nuevo Juego</button>
+            <button id="solve-game">Resolver</button>
+        </div>
+        <div id="sudoku-grid" class="sudoku-grid">
+            </div>
+        <div id="message" class="message"></div>
+    </div>
+    <div class="container math-game-container">
+        <h1>Matemáticas - Pre-Cálculo Avanzado</h1>
+        <div class="controls math-controls-flex">
+            <div class="control-group">
+                <label for="math-module">Módulo:</label>
+                <select id="math-module">
+                    <option value="algebra-basica">Módulo 1: Aritmética y Álgebra Básica</option>
+                    <option value="algebra-intermedia">Módulo 2: Álgebra Intermedia</option>
+                    <option value="numeros-complejos">Módulo 3: Números Complejos</option>
+                    <option value="funciones-propiedades">Módulo 4: Funciones y sus propiedades</option>
+                    <option value="funciones-algebraicas">Módulo 5: Funciones algebraicas comunes</option>
+                    <option value="analisis-polinomios">Módulo 6: Análisis de polinomios</option>
+                    <option value="fracciones-parciales">Módulo 7: Fracciones parciales</option>
+                    <option value="expo-log">Módulo 8: Funciones exponenciales y logarítmicas</option>
+                    <option value="trigonometria">Módulo 9: Trigonometría</option>
+                    <option value="geometria-analitica">Módulo 10: Geometría analítica</option>
+                    <option value="sucesiones-series">Módulo 11: Sucesiones, series y progresiones</option>
+                    <option value="combinatoria-probabilidad">Módulo 12: Combinatoria y Probabilidad</option>
+                    <option value="introduccion-calculo">Módulo 13: Introducción al Cálculo</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="math-topic">Tema:</label>
+                <select id="math-topic">
+                    </select>
+            </div>
+            <button id="new-math-problem">Generar Problema</button>
+        </div>
+        <div class="math-problem-area">
+            <p id="math-problem-text"></p>
+            <input type="text" id="math-answer-input" placeholder="Tu respuesta">
+            <button id="check-math-answer">Comprobar</button>
+            <p id="math-result-message"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="math-game.js"></script> </body>
+</html>
