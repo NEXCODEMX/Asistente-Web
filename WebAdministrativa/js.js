@@ -20,11 +20,11 @@
             ],
             "9:00": [
                 {"title": "Derevo", "type": "work", "duration_minutes": 180, "start_offset_minutes": 0},
-                {"title": "Calculo", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Calculo", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "10:00": [
                 {"title": "Derevo", "type": "work", "duration_minutes": 180, "start_offset_minutes": 0},
-                {"title": "Calculo", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Calculo", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
            "11:00": [
                 {"title": "Capacitaciones Derevo", "type": "work", "duration_minutes": 120, "start_offset_minutes": 0}
@@ -50,10 +50,10 @@
                 {"title": "Estructura De Datos", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "19:00": [
-                {"title": "Arquitectura De Computadoras", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Arquitectura De Computadoras", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "20:00": [
-                {"title": "Arquitectura De Computadoras", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Arquitectura De Computadoras", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "21:00": [
                 {"title": "Regreso de universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
@@ -185,10 +185,10 @@
                 {"title": "Estructura De Datos", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "19:00": [
-                {"title": "Arquitectura De Computadoras", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Arquitectura De Computadoras", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "20:00": [
-                {"title": "Arquitectura De Computadoras", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Arquitectura De Computadoras", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "21:00": [
                 {"title": "Regreso de universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
