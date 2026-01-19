@@ -44,16 +44,19 @@
                 {"title": "Traslado a universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "17:00": [
-                {"title": "Innovación y Tecnología", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Estructura De Datos", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "18:00": [
-                {"title": "Innovación y Tecnología", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Estructura De Datos", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "19:00": [
-                {"title": "Regreso de universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Arquitectura De Computadoras", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+            ],
+            "20:00": [
+                {"title": "Arquitectura De Computadoras", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "21:00": [
-                {"title": "Alonso Restaurantes", "type": "leisure", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Regreso de universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "22:00": [
                 {"title": "Alonso Restaurantes", "type": "leisure", "duration_minutes": 120, "start_offset_minutes": 0}
@@ -85,10 +88,10 @@
             ],
             "9:00": [
                 {"title": "Derevo", "type": "work", "duration_minutes": 180, "start_offset_minutes": 0},
-                {"title": "NEXCODE", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "POO", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "10:00": [
-                {"title": "NEXCODE", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "POO", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
            "11:00": [
                 {"title": "Capacitaciones Derevo", "type": "work", "duration_minutes": 120, "start_offset_minutes": 0}
@@ -109,16 +112,16 @@
                 {"title": "Traslado a universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "17:00": [
-                {"title": "Sistemas Digitales", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Calculo Diferencial e Integral", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "18:00": [
-                {"title": "Sistemas Digitales", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Calculo Diferencial e Integral", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "19:00": [
-                {"title": "Programación Orientada a Objetos", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Diseño de Videojuegos", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "20:00": [
-                {"title": "Programación Orientada a Objetos", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Diseño de Videojuegos", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "21:00": [
                 {"title": "Regreso de universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
@@ -150,10 +153,10 @@
             ],
             "9:00": [
                 {"title": "Derevo", "type": "work", "duration_minutes": 180, "start_offset_minutes": 0},
-                {"title": "CUCEI MART", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Calculo", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "10:00": [
-                {"title": "CUCEI MART", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Calculo", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "11:00": [
                 {"title": "Capacitaciones Derevo", "type": "work", "duration_minutes": 120, "start_offset_minutes": 0}
@@ -173,22 +176,22 @@
                 {"title": "Covers", "type": "leisure", "duration_minutes": 60, "start_offset_minutes": 0}
             ],
             "16:00": [
-                {"title": "Covers", "type": "leisure", "duration_minutes": 60, "start_offset_minutes": 0}
+                {"title": "Traslado a universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "17:00": [
-                {"title": "Covers", "type": "leisure", "duration_minutes": 60, "start_offset_minutes": 0}
+                {"title": "Estructura De Datos", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "18:00": [
-                {"title": "Covers", "type": "leisure", "duration_minutes": 60, "start_offset_minutes": 0}
+                {"title": "Estructura De Datos", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "19:00": [
-                {"title": "Covers", "type": "leisure", "duration_minutes": 60, "start_offset_minutes": 0}
+                {"title": "Arquitectura De Computadoras", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "20:00": [
-                {"title": "Covers", "type": "leisure", "duration_minutes": 60, "start_offset_minutes": 0}
+                {"title": "Arquitectura De Computadoras", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "21:00": [
-                {"title": "Composición", "type": "leisure", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Regreso de universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "22:00": [
                 {"title": "Composición", "type": "leisure", "duration_minutes": 120, "start_offset_minutes": 0}
@@ -243,24 +246,25 @@
                 {"title": "Traslado a universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "17:00": [
-                {"title": "Sistemas Digitales", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Calculo Diferencial e Integral", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "18:00": [
-                {"title": "Sistemas Digitales", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Calculo Diferencial e Integral", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "19:00": [
-                {"title": "Programación Orientada a Objetos", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Diseño de Videojuegos", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "20:00": [
-                {"title": "Programación Orientada a Objetos", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Diseño de Videojuegos", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "21:00": [
                 {"title": "Regreso de universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0},
-                {"title": "MAELSTROM Ensayo", "type": "leisure", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Tiktok Cover", "type": "leisure", "duration_minutes": 120, "start_offset_minutes": 0}
 
             ],
             "22:00": [
-                {"title": "MAELSTROM Ensayo", "type": "leisure", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Tiktok Cover", "type": "leisure", "duration_minutes": 120, "start_offset_minutes": 0}
+
 
             ],
             "23:00": [
@@ -281,50 +285,49 @@
                 {"title": "Meditar", "type": "leisure", "duration_minutes": 30, "start_offset_minutes": 30}
             ],
             "7:00": [
-                {"title": "Gym", "type": "leisure", "duration_minutes": 60, "start_offset_minutes": 0}
+                {"title": "Traslado a universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "8:00": [
-                {"title": "Ducharme", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
+                {"title": "Liderazgo y Emprendimiento", "type": "university", "duration_minutes": 15, "start_offset_minutes": 0},
                 {"title": "Hacer del baño", "type": "important", "duration_minutes": 15, "start_offset_minutes": 15},
                 {"title": "Hacer rachas", "type": "important", "duration_minutes": 10, "start_offset_minutes": 5}
             ],
             "9:00": [
                 {"title": "Derevo", "type": "work", "duration_minutes": 180, "start_offset_minutes": 0},
-                {"title": "Youtube", "type": "leisure", "duration_minutes": 180, "start_offset_minutes": 0}
+                {"title": "Liderazgo y Emprendimiento", "type": "university", "duration_minutes": 180, "start_offset_minutes": 0}
             ],
             "10:00": [
-                {"title": "Youtube", "type": "leisure", "duration_minutes": 180, "start_offset_minutes": 0}
+                {"title": "Liderazgo y Emprendimiento", "type": "university", "duration_minutes": 180, "start_offset_minutes": 0}
             ],
             "11:00": [
-                {"title": "Capacitaciones Derevo", "type": "work", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Programacion para Internet", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "12:00": [
-                {"title": "Capacitaciones Derevo", "type": "work", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Programacion para Internet", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "13:00": [
-                {"title": "FLSTUDIO", "type": "leisure", "duration_minutes": 60, "start_offset_minutes": 0}
+                {"title": "Programacion para Internet", "type": "university", "duration_minutes": 60, "start_offset_minutes": 0}
             ],
             "14:00": [
                 {"title": "Comer", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
-                {"title": "Lavar trastes", "type": "important", "duration_minutes": 10, "start_offset_minutes": 15},
-                {"title": "Pasear perritos", "type": "leisure", "duration_minutes": 15, "start_offset_minutes": 25}
+                {"title": "Programacion Para Internet", "type": "university", "duration_minutes": 15, "start_offset_minutes": 25}
+            ],
+            "15:00": [
+                {"title": "Probabilidad y Estadisticas", "type": "university", "duration_minutes": 60, "start_offset_minutes": 0}
             ],
             "16:00": [
-                {"title": "Traslado a universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Probabilidad y Estadisticas", "type": "university", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "17:00": [
-                {"title": "Circuitos Electrónicos y Electromagnetismo", "type": "university", "duration_minutes": 240, "start_offset_minutes": 0}
+                {"title": "Estructura de Datos", "type": "university", "duration_minutes": 240, "start_offset_minutes": 0}
             ],
             "18:00": [
-                {"title": "Circuitos Electrónicos y Electromagnetismo", "type": "university", "duration_minutes": 240, "start_offset_minutes": 0}
+                {"title": "Estructura de Datos", "type": "university", "duration_minutes": 240, "start_offset_minutes": 0}
             ],
             "19:00": [
-                {"title": "Circuitos Electrónicos y Electromagnetismo", "type": "university", "duration_minutes": 240, "start_offset_minutes": 0}
+                {"title": "Estructura de Datos", "type": "university", "duration_minutes": 240, "start_offset_minutes": 0}
             ],
             "20:00": [
-                {"title": "Circuitos Electrónicos y Electromagnetismo", "type": "university", "duration_minutes": 240, "start_offset_minutes": 0}
-            ],
-            "21:00": [
                 {"title": "Regreso de universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "23:00": [
@@ -338,40 +341,24 @@
                 {"title": "Dormir", "type": "important", "duration_minutes": 300, "start_offset_minutes": 0}
             ],
             "6:00": [
-                {"title": "Pasear perros", "type": "leisure", "duration_minutes": 15, "start_offset_minutes": 0},
-                {"title": "Desayunar", "type": "important", "duration_minutes": 5, "start_offset_minutes": 15},
-                {"title": "Lavar dientes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 20},
-                {"title": "Lavar trastes", "type": "important", "duration_minutes": 5, "start_offset_minutes": 25},
-                {"title": "Meditar", "type": "leisure", "duration_minutes": 30, "start_offset_minutes": 30}
             ],
             "7:00": [
-                {"title": "Traslado a universidad (camión)", "type": "important", "duration_minutes": 60, "start_offset_minutes": 0}
             ],
             "8:00": [
-                {"title": "Ingeniería de Software", "type": "university", "duration_minutes": 240, "start_offset_minutes": 0}
             ],
             "9:00": [
-                {"title": "Ingeniería de Software", "type": "university", "duration_minutes": 240, "start_offset_minutes": 0}
             ],
             "10:00": [
-                {"title": "Ingeniería de Software", "type": "university", "duration_minutes": 240, "start_offset_minutes": 0}
             ],
             "11:00": [
-                {"title": "Ingeniería de Software", "type": "university", "duration_minutes": 240, "start_offset_minutes": 0},
-                {"title": "Seminario Integracion Protocolo", "type": "university", "duration_minutes": 240, "start_offset_minutes": 0}
-
             ],
             "12:00": [
-                {"title": "Seminario Integracion Protocolo", "type": "university", "duration_minutes": 240, "start_offset_minutes": 0}
             ],
             "13:00": [
-                {"title": "Regreso de universidad (camión)", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "Clases de Canto Amelie", "type": "leisure", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
-            "21:00": [
-                {"title": "Alonso Restaurantes", "type": "leisure", "duration_minutes": 180, "start_offset_minutes": 0}
-            ],
-            "22:00": [
-                {"title": "Alonso Restaurantes", "type": "leisure", "duration_minutes": 180, "start_offset_minutes": 0}
+            "17:00": [
+                {"title": "Ensayo Banda", "type": "leisure", "duration_minutes": 180, "start_offset_minutes": 0}
             ],
             "23:00": [
                 {"title": "Cenar", "type": "important", "duration_minutes": 15, "start_offset_minutes": 0},
@@ -381,13 +368,10 @@
         },
         "sunday": {
             "0:00": [
-                {"title": "Dormir", "type": "important", "duration_minutes": 360, "start_offset_minutes": 0}
             ],
             "12:00": [
-                {"title": "Clase Programación Paulo", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "13:00": [
-                {"title": "Clase Programación Paulo", "type": "important", "duration_minutes": 120, "start_offset_minutes": 0}
             ]
         },
 
@@ -548,10 +532,10 @@
 
 
         let financialData = {
-            totalWealth: 0.0, 
-            bankBalance: 0.0,  // Banco
-            cashBalance: 0.0,      // Efectivo
-            cetesBalance: 0.0, // CETES
+            totalWealth: 12121.10, 
+            bankBalance: 1264.40,  // Banco
+            cashBalance: 7000.0,      // Efectivo
+            cetesBalance: 3856.70, // CETES
             savings: 0.0,      // 50%
             investments: 0.0,  // 30%
             expenses: 0.0,    // 20% del total 
