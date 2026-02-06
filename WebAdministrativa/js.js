@@ -532,12 +532,12 @@
 
 
         let financialData = {
-            totalWealth: 0, 
-            bankBalance: 0,  // Banco
-            cashBalance: 0,      // Efectivo
-            cetesBalance: 0, // CETES
-            savings: 0.0,      // 50%
-            investments: 0.0,  // 30%
+            totalWealth: 39907.97, 
+            bankBalance: 22562.43,  // Banco
+            cashBalance: 6000,      // Efectivo
+            cetesBalance: 11345.54, // CETES
+            savings: 19953.99,      // 50%
+            investments: 11972.39,  // 30%
             expenses: 0.0,    // 20% del total 
             transactions: [
                 {   
@@ -547,8 +547,8 @@
                     type: 'income'
                 },
             ],
-            lastPaymentDate: new Date('2025-12-30'), 
-            paymentAmount: 3000
+            lastPaymentDate: new Date('2026-02-01'), 
+            paymentAmount: 18000
         };
         function loadData() {
             const saved = localStorage.getItem('financialData');
