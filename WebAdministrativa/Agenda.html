@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Agenda.css">
+    <title>Agenda</title>
+</head>
+<body>
+    <div id="reloj" class="clock-widget">
+        <i class="fas fa-clock me-2"></i>
+        <span id="clock-text"></span>
+    </div>
+    <button class="theme-toggle-btn" id="themeToggle" aria-label="Cambiar tema">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+    <div class="container-fluid py-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-10">
+                <div class="main-header text-center mb-4">
+                    <h1 class="app-title">
+                        <i class="fas fa-clipboard-check me-3"></i>
+                        Agenda de Gestion de Tareas
+                    </h1>
+                    <p class="app-subtitle">Agenda</p>
+                </div>
+                <div class="row g-3 mb-4">
+                    <div class="col-6 col-md-3">
+                        <div class="stat-card stat-total">
+                            <div class="stat-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="totalTasks">0</h3>
+                                <p>Total Tareas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-card stat-pending">
+                            <div class="stat-icon">
+                                <i class="fas fa-hourglass-half"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="pendingTasks">0</h3>
+                                <p>Pendientes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-card stat-completed">
+                            <div class="stat-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="completedTasks">0</h3>
+                                <p>Completadas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-card stat-progress">
+                            <div class="stat-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="progressPercent">0%</h3>
+                                <p>Progreso</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-container mb-4">
+                    <div class="progress-header mb-2">
+                        <span class="progress-label">Progreso General</span>
+                        <span class="progress-value" id="progressValue">0% completado</span>
+                    </div>
+                    <div class="progress custom-progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" 
+                             role="progressbar" 
+                             id="mainProgressBar"
+                             style="width: 0%"
+                             aria-valuenow="0" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="task-manager-card">
+                    <div class="alert-container" id="alertContainer"></div>
+                    <div class="add-task-section">
+                        <h5 class="section-title mb-3">
+                            <i class="fas fa-plus-circle me-2"></i>
+                            Agregar Nueva Tarea
+                        </h5>
+                        <form id="taskForm">
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label">
+                                        <i class="fas fa-pencil-alt me-1"></i>
+                                        Descripción de la tarea
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control form-control-lg" 
+                                           id="taskInput" 
+                                           placeholder="¿Qué necesitas hacer?"
+                                           required>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <label class="form-label">
+                                        <i class="fas fa-calendar-alt me-1"></i>
+                                        Fecha límite
+                                    </label>
+                                    <input type="date" 
+                                           class="form-control form-control-lg" 
+                                           id="dueDateInput">
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <label class="form-label">
+                                        <i class="fas fa-tag me-1"></i>
+                                        Categoría
+                                    </label>
+                                    <select class="form-select form-select-lg" id="categoryInput">
+                                        <option value="trabajo">
+                                            <i class="fas fa-briefcase"></i> Trabajo
+                                        </option>
+                                        <option value="personal">
+                                            <i class="fas fa-user"></i> Personal
+                                        </option>
+                                        <option value="proyecto">
+                                            <i class="fas fa-folder-open"></i> Proyecto
+                                        </option>
+                                        <option value="estudio">
+                                            <i class="fas fa-graduation-cap"></i> Estudio
+                                        </option>
+                                        <option value="salud">
+                                            <i class="fas fa-heartbeat"></i> Salud
+                                        </option>
+                                        <option value="compras">
+                                            <i class="fas fa-shopping-cart"></i> Compras
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100 add-btn">
+                                        <i class="fas fa-plus me-2"></i>
+                                        <span id="btnText">Agregar Tarea</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="filters-section">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-12 col-md-6">
+                                <h5 class="section-title mb-2">
+                                    <i class="fas fa-filter me-2"></i>
+                                    Filtrar Tareas
+                                </h5>
+                                <div class="btn-group filter-group" role="group">
+                                    <button type="button" class="btn btn-outline-primary active" data-filter="all">
+                                        <i class="fas fa-list me-1"></i> Todas
+                                    </button>
+                                    <button type="button" class="btn btn-outline-warning" data-filter="pending">
+                                        <i class="fas fa-clock me-1"></i> Pendientes
+                                    </button>
+                                    <button type="button" class="btn btn-outline-success" data-filter="completed">
+                                        <i class="fas fa-check me-1"></i> Completadas
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <label class="form-label fw-bold">Categoría</label>
+                                <select class="form-select" id="categoryFilter">
+                                    <option value="all">Todas las categorías</option>
+                                    <option value="trabajo">Trabajo</option>
+                                    <option value="personal">Personal</option>
+                                    <option value="proyecto">Proyecto</option>
+                                    <option value="estudio">Estudio</option>
+                                    <option value="salud">Salud</option>
+                                    <option value="compras">Compras</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <label class="form-label fw-bold">Ordenar por</label>
+                                <select class="form-select" id="sortBy">
+                                    <option value="date">Fecha de creación</option>
+                                    <option value="dueDate">Fecha límite</option>
+                                    <option value="category">Categoría</option>
+                                    <option value="status">Estado</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="quick-actions mt-3">
+                            <button class="btn btn-sm btn-outline-danger" id="clearCompleted">
+                                <i class="fas fa-trash-alt me-1"></i> Eliminar completadas
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger" id="clearAll">
+                                <i class="fas fa-exclamation-triangle me-1"></i> Eliminar todas
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tasks-list-section">
+                        <h5 class="section-title mb-3">
+                            <i class="fas fa-list-check me-2"></i>
+                            Mis Tareas
+                            <span class="badge bg-primary ms-2" id="taskCount">0</span>
+                        </h5>
+                        <div class="tasks-container" id="tasksContainer">
+                            <div class="empty-state" id="emptyState">
+                                <i class="fas fa-inbox fa-4x mb-3"></i>
+                                <h4>No hay tareas</h4>
+                                <p>Comienza agregando tu primera tarea arriba</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="navigation-section mt-4"> 
+                    <div class="row g-2">
+                        <div class="col-6 col-md-3">
+                            <button class="btn btn-outline-secondary w-100"
+                                onclick="window.location.href='https://nexcodemx.github.io/Asistente-Web/WebAdministrativa/Horarios.html';">
+                                <i class="fas fa-home me-2"></i>Inicio
+                            </button>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <button class="btn btn-outline-secondary w-100"
+                                onclick="window.location.href='https://nexcodemx.github.io/Asistente-Web/WebAdministrativa/Cuentas.html';">
+                                <i class="fas fa-wallet me-2"></i>Cuentas
+                            </button>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <button class="btn btn-outline-secondary w-100"
+                                onclick="window.location.href='https://nexcodemx.github.io/Asistente-Web/WebAdministrativa/Gym.html';">
+                                <i class="fas fa-dumbbell me-2"></i>Gym
+                            </button>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <button class="btn btn-outline-secondary w-100" id="exportTasks">
+                                <i class="fas fa-download me-2"></i>Exportar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="editTaskModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editTaskModalLabel">
+                        <i class="fas fa-edit me-2"></i>Editar Tarea
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editTaskForm">
+                        <div class="mb-3">
+                            <label for="editTaskInput" class="form-label">Descripción</label>
+                            <input type="text" class="form-control" id="editTaskInput" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editDueDateInput" class="form-label">Fecha límite</label>
+                            <input type="date" class="form-control" id="editDueDateInput">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editCategoryInput" class="form-label">Categoría</label>
+                            <select class="form-select" id="editCategoryInput">
+                                <option value="trabajo">Trabajo</option>
+                                <option value="personal">Personal</option>
+                                <option value="proyecto">Proyecto</option>
+                                <option value="estudio">Estudio</option>
+                                <option value="salud">Salud</option>
+                                <option value="compras">Compras</option>
+                            </select>
+                        </div>
+                        <input type="hidden" id="editTaskId">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-1"></i>Cancelar
+                    </button>
+                    <button type="button" class="btn btn-primary" id="saveEditBtn">
+                        <i class="fas fa-save me-1"></i>Guardar Cambios
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Agenda.js"></script>
+</body>
+</html>

@@ -20,11 +20,11 @@
             ],
             "9:00": [
                 {"title": "Derevo", "type": "work", "duration_minutes": 180, "start_offset_minutes": 0},
-                {"title": "Calculo", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "CD", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
             "10:00": [
                 {"title": "Derevo", "type": "work", "duration_minutes": 180, "start_offset_minutes": 0},
-                {"title": "Calculo", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
+                {"title": "CD", "type": "project", "duration_minutes": 120, "start_offset_minutes": 0}
             ],
            "11:00": [
                 {"title": "Capacitaciones Derevo", "type": "work", "duration_minutes": 120, "start_offset_minutes": 0}
@@ -532,10 +532,10 @@
 
 
         let financialData = {
-            totalWealth: 12121.10, 
-            bankBalance: 1264.40,  // Banco
-            cashBalance: 7000.0,      // Efectivo
-            cetesBalance: 3856.70, // CETES
+            totalWealth: 0, 
+            bankBalance: 0,  // Banco
+            cashBalance: 0,      // Efectivo
+            cetesBalance: 0, // CETES
             savings: 0.0,      // 50%
             investments: 0.0,  // 30%
             expenses: 0.0,    // 20% del total 
@@ -777,8 +777,6 @@
         });
 
 
-
-
         const tasksBtn = document.getElementById('tasks-btn');
         const tasksOverlay = document.getElementById('important-tasks-overlay');
         const closeTasksBtn = document.getElementById('close-tasks-btn');
@@ -878,9 +876,6 @@
                 `;
             }).join('');
         }
-
-
-
 const monthlyGoalsBtn = document.getElementById('monthly-goals-btn');
 const monthlyGoalsOverlay = document.getElementById('monthly-goals-overlay');
 const closeMonthlyGoalsBtn = document.getElementById('close-monthly-goals-btn');
@@ -889,15 +884,11 @@ const goalsEmptyState = document.getElementById('goals-empty-state');
 const monthlyGoalsData = `
 Avanzar Segundo EP Musical                          Minimo Maqueta instrumental de todo el EP                   
 Avanzar Capacitacion Derevo                         Minimo 2hrs diarias
-Avanzar el curso de Programacion desde 0            Minimo Acabar este mes
+Avanzar mi curso de Programacion desde 0            Minimo Acabar este mes
 Hacer Cover en Tiktok                 Minimo 1 Cover bien hecho este mes
 Subir un Cover a Youtube              Minimo 1 Cover Completo que esten bien en YT
-
-Estudiar Calculo                      Minimo Pasar el Examen este mes
 Avanzar CUCEI MART              Minimo Terminar el Area de Mapa interactivo y agregar mas emprendedores
 Avanzar NEXCODE                 Minimo curso de programacion desde 0 Terminado
-
-
 Curso de Piano                    
 Curso de Voz                  
 Curso de Flstudio          
@@ -905,7 +896,6 @@ Repertorio                      Minimo 2 horas repertorio
 GYM                             Minimo subir 2kg
 Meditar                     Minimo 15 min diarios       
 `;
-
 let monthlyGoals = [];
 function parseMonthlyGoals(text) {
     const lines = text.split('\n').filter(line => line.trim() !== '');
@@ -993,3 +983,10 @@ document.addEventListener('DOMContentLoaded', () => {
     monthlyGoals = parseMonthlyGoals(monthlyGoalsData);
     renderMonthlyGoals(); 
 });
+
+
+
+
+
+
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Adivina el Número</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+            background-size: 400% 400%;
+            animation: fondoAnimado 12s ease infinite;
+            color: #fff;
+        }
+        @keyframes fondoAnimado {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .game-card {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+        }
+        .numbers-tried span {
+            margin-right: 6px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body class="d-flex justify-content-center align-items-center">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="game-card p-4 text-center">
+                <h2 class="mb-3">
+                    <i class="fa-solid fa-microchip"></i>
+                    Adivina el Numero
+                </h2>
+                <p>Estoy pensando en un numero entre <strong>1 y 100</strong></p>
+                <p>Intentos restantes: <span id="intentos">10</span></p>
+                <div class="input-group mb-3">
+                    <input type="number" id="guess" class="form-control" placeholder="Tu número">
+                    <button class="btn btn-info" onclick="hacerIntento()">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+                <p id="mensaje" class="fw-bold"></p>
+                <div class="numbers-tried mb-3">
+                    <p class="mb-1">Numeros probados:</p>
+                    <div id="listaNumeros"></div>
+                </div>
+                <button id="reiniciar" class="btn btn-warning d-none" onclick="reiniciarJuego()">
+                    <i class="fa-solid fa-rotate-right"></i> Jugar de nuevo
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let numeroSecreto;
+    let intentosRestantes;
+    let numerosProbados;
+    iniciarJuego();
+    function iniciarJuego() {
+        numeroSecreto = Math.floor(Math.random() * 100) + 1;
+        intentosRestantes = 10;
+        numerosProbados = [];
+        document.getElementById("intentos").textContent = intentosRestantes;
+        document.getElementById("mensaje").textContent = "";
+        document.getElementById("listaNumeros").innerHTML = "";
+        document.getElementById("guess").disabled = false;
+        document.getElementById("reiniciar").classList.add("d-none");
+    }
+    function hacerIntento() {
+        const input = document.getElementById("guess");
+        const numero = Number(input.value);
+        if (!numero || numero < 1 || numero > 100) {
+            document.getElementById("mensaje").textContent = "Introduce un numero (1-100)";
+            return;
+        }
+        if (numerosProbados.includes(numero)) {
+            document.getElementById("mensaje").textContent = "Ya probaste ese numero";
+            return;
+        }
+        numerosProbados.push(numero);
+        intentosRestantes--;
+        document.getElementById("intentos").textContent = intentosRestantes;
+        mostrarNumerosProbados();
+        if (numero === numeroSecreto) {
+            document.getElementById("mensaje").textContent = "Ganaste, hay un sistema de algoritmo falso detras de esto relacionado a la conjetura de collatz?";
+            terminarJuego();
+        } else if (intentosRestantes === 0) {
+            document.getElementById("mensaje").textContent =
+                `Se acabaron los intentos, te recomiendo usar algun metodo de algoritmo para aumentar tus posibilidades de ganar. El numero era ${numeroSecreto}`;
+            terminarJuego();
+        } else if (numero < numeroSecreto) {
+            document.getElementById("mensaje").textContent = "Demasiado bajo";
+        } else {
+            document.getElementById("mensaje").textContent = "Demasiado alto";
+        }
+        input.value = "";
+    }
+    function mostrarNumerosProbados() {
+        const contenedor = document.getElementById("listaNumeros");
+        contenedor.innerHTML = "";
+        numerosProbados.forEach(n => {
+            const badge = document.createElement("span");
+            badge.className = "badge bg-secondary";
+            badge.textContent = n;
+            contenedor.appendChild(badge);
+        });
+    }
+    function terminarJuego() {
+        document.getElementById("guess").disabled = true;
+        document.getElementById("reiniciar").classList.remove("d-none");
+    }
+    function reiniciarJuego() {
+        iniciarJuego();
+    }
+</script>
+</body>
+</html>
